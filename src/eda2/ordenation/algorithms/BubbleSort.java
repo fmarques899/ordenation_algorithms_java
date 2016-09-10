@@ -1,8 +1,8 @@
 package eda2.ordenation.algorithms;
 
-public class BubbleSort {
+public abstract class BubbleSort {
 	
-	public int[] sortByBubbleSort(int[] array){
+	public static int[] sortByBubbleSort(int[] array){
 		
 		int auxiliarSwapVariable;
 		for(int i=0;i<array.length;i++){

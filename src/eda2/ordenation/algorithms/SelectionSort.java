@@ -1,8 +1,8 @@
 package eda2.ordenation.algorithms;
 
-public class SelectionSort {
+public abstract class SelectionSort {
 
-	public int[] sortBySelection(int[] array) {
+	public static int[] sortBySelection(int[] array) {
 
 		int minorValue;
 		int position;

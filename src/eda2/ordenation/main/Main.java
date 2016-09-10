@@ -8,31 +8,30 @@ import eda2.ordenation.algorithms.SelectionSort;
 
 public class Main {
 
+	private static Scanner scanner;
+
 	public static void main(String[] args) {
 		System.out.println("Choose wich algorithm you want to use for sorting the array");
-		Scanner scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		int algorithm = scanner.nextInt();
-		SelectionSort selectionSort = new SelectionSort();
-		InsertionSort insertionSort = new InsertionSort();
-		BubbleSort bubbleSort = new BubbleSort();
 		
-		int unorderedArray[] = { 6,3,2,11,1,-5 };
+		int unorderedArray[] = { 35603,6,3,2,11,1,-5};
 		int orderedArray[];
 		switch (algorithm) {
 			
 			// Selection Sort
 			case 1: {
-				orderedArray = selectionSort.sortBySelection(unorderedArray);
+				orderedArray = SelectionSort.sortBySelection(unorderedArray);
 				printResult(orderedArray);
 			} break;
 			// Insertion Sort
 			case 2: {
-				orderedArray = insertionSort.sortByInsertionSort(unorderedArray);
+				orderedArray = InsertionSort.sortByInsertionSort(unorderedArray);
 				printResult(orderedArray);
 			} break;
 			// Bubble Sort
 			case 3: {
-				orderedArray = bubbleSort.sortByBubbleSort(unorderedArray);
+				orderedArray = BubbleSort.sortByBubbleSort(unorderedArray);
 				printResult(orderedArray);
 			}
 		}

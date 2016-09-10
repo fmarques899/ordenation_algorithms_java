@@ -1,8 +1,8 @@
 package eda2.ordenation.algorithms;
 
-public class InsertionSort {
+public abstract class InsertionSort {
 
-	public int[] sortByInsertionSort(int[] array){
+	public static int[] sortByInsertionSort(int[] array){
 		
 		int selectedElement;
 		
