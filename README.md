@@ -2,8 +2,12 @@
 
 ## Already implemented
 
-### Quadratic Sorting Algorithms
+### n^2 Sorting Algorithms 
 
 * Insertion Sort
 * Selection Sort
 * Bubble Sort
+
+----
+
+* Shell Sort
