@@ -7,8 +7,13 @@ public abstract class ShellSort {
 		final int half = array.length / 2;
 		int auxiliarSwap;
 		int jumper = half;
-		System.out.println("Valor do jumper: " + jumper);
+		
+		/*This will separate the array into groups and applies Selection Sort into 
+		 * those groups.
+		 * Each loop decreases into half the value of the 'jumper', and it will 
+		 * make more groups for each iteraction*/
 		while(jumper >  0){
+			
 			for(int i=0 ; i+jumper<array.length ; i++){
 				if(array[i]>array[i+jumper]){
 					auxiliarSwap = array[i+jumper];
@@ -19,7 +24,7 @@ public abstract class ShellSort {
 				}
 			}
 		jumper = jumper /2;
-		System.out.println("Valor do jumper: " + jumper);
+		
 		}
 		
 		return array;
