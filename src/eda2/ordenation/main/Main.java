@@ -16,7 +16,7 @@ public class Main {
 		scanner = new Scanner(System.in);
 		int algorithm = scanner.nextInt();
 		
-		int unorderedArray[] = { 76,6,3,2,11,1,-5, -1,-2};
+		int unorderedArray[] = { 76,6,3,2,11,1,-5, 1,2,88,-23,37,-22,45,13,10,41,24,91,-11,-666};
 		int orderedArray[];
 		switch (algorithm) {
 			
@@ -47,6 +47,28 @@ public class Main {
 		for(int i=0;i<orderedArray.length;i++ ){
 			System.out.println(orderedArray[i]);
 		}
+		
+		if(sortChecker(orderedArray)){
+			System.out.println("Ordenação Realizada com sucesso");
+		}else {
+			System.out.println("Existe(m) elemento(s) desordenado no array.");
+		}
+	}
+	
+	private static boolean sortChecker(int[] array){
+		boolean isCorrectedSorted = true;
+		
+		for(int i=0;i<array.length-1;i++){
+			if(array[i]>array[i+1]){
+				isCorrectedSorted = false;
+				break;
+			} else {
+				// Do nothing
+			}
+			
+		}
+		
+		return isCorrectedSorted;
 	}
 
 }
