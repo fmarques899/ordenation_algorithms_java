@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import eda2.ordenation.algorithms.BubbleSort;
 import eda2.ordenation.algorithms.InsertionSort;
+import eda2.ordenation.algorithms.MergeSort;
+import eda2.ordenation.algorithms.QuickSort;
 import eda2.ordenation.algorithms.SelectionSort;
 import eda2.ordenation.algorithms.ShellSort;
 
@@ -16,7 +18,7 @@ public class Main {
 		scanner = new Scanner(System.in);
 		int algorithm = scanner.nextInt();
 		
-		int unorderedArray[] = { 76,6,3,2,11,1,-5, 1,2,88,-23,37,-22,45,13,10,41,24,91,-11,-666};
+		int unorderedArray[] = { 76,6,3,2,11,1,-5, 1,2,88,-23,37,-22,45,10,41,24,91,-11,50};
 		int orderedArray[];
 		switch (algorithm) {
 			
@@ -38,7 +40,14 @@ public class Main {
 			case 4: {
 				orderedArray = ShellSort.sortByShellSort(unorderedArray);
 				printResult(orderedArray);
-			}
+			}break;
+			case 5: {
+				orderedArray = QuickSort.sortByQuickSort(unorderedArray, 0, unorderedArray.length-1);
+				printResult(orderedArray);
+			} break;
+			case 6:
+				orderedArray = MergeSort.sortByMergeSort(unorderedArray, 0, unorderedArray.length-1);
+				printResult(orderedArray);
 			
 		}
 	}
